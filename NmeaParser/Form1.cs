@@ -32,6 +32,9 @@ namespace NmeaParser
         {
             base.OnLoad(e);
 
+            hdt = new HDT();
+            gga = new GGA();
+            att = new P_ATT();
             nmeaParser = new NMEA();
             nmeaParser.MessageReceived += NmeaParser_MessageReceived;
 
