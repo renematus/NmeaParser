@@ -1,0 +1,928 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<gpx version="1.1" creator="TrekBuddy 0.9.99" xmlns="http://www.topografix.com/GPX/1/1" xmlns:nmea="http://trekbuddy.net/2009/01/gpx/nmea" xmlns:gsm="http://trekbuddy.net/2009/01/gpx/gsm">
+  <trk>
+    <trkseg>
+      <trkpt lat="48.926592657" lon="19.650112461">
+        <ele>1787.5</ele>
+        <time>2010-08-12T13:47:10.302Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions/>
+      </trkpt>
+      <trkpt lat="48.926513616" lon="19.650097458">
+        <ele>1787.0</ele>
+        <time>2010-08-12T13:47:17.214Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>263.8</nmea:course>
+          <nmea:speed>1.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926435161" lon="19.649689511">
+        <ele>1772.0</ele>
+        <time>2010-08-12T13:48:07.137Z</time>
+        <fix>3d</fix>
+        <sat>8</sat>
+        <extensions>
+          <nmea:course>175.8</nmea:course>
+          <nmea:speed>1.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926491655" lon="19.649472587">
+        <ele>1773.5</ele>
+        <time>2010-08-12T13:49:08.103Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>157.5</nmea:course>
+          <nmea:speed>0.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926486710" lon="19.649441155">
+        <ele>1775.5</ele>
+        <time>2010-08-12T13:49:22.089Z</time>
+        <fix>3d</fix>
+        <sat>8</sat>
+        <extensions>
+          <nmea:course>116.5</nmea:course>
+          <nmea:speed>1.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926467934" lon="19.649466217">
+        <ele>1776.5</ele>
+        <time>2010-08-12T13:50:23.057Z</time>
+        <fix>3d</fix>
+        <sat>8</sat>
+        <extensions>
+          <nmea:course>222.9</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926509760" lon="19.649451297">
+        <ele>1773.5</ele>
+        <time>2010-08-12T13:51:08.047Z</time>
+        <fix>3d</fix>
+        <sat>7</sat>
+        <extensions>
+          <nmea:course>298.3</nmea:course>
+          <nmea:speed>1.3</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926519818" lon="19.649419111">
+        <ele>1773.5</ele>
+        <time>2010-08-12T13:51:10.044Z</time>
+        <fix>3d</fix>
+        <sat>7</sat>
+        <extensions>
+          <nmea:course>279.4</nmea:course>
+          <nmea:speed>1.3</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926526691" lon="19.649238816">
+        <ele>1773.0</ele>
+        <time>2010-08-12T13:51:25.035Z</time>
+        <fix>3d</fix>
+        <sat>8</sat>
+        <extensions>
+          <nmea:course>255.9</nmea:course>
+          <nmea:speed>1.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926515040" lon="19.649197996">
+        <ele>1772.0</ele>
+        <time>2010-08-12T13:51:28.037Z</time>
+        <fix>3d</fix>
+        <sat>7</sat>
+        <extensions>
+          <nmea:course>239.1</nmea:course>
+          <nmea:speed>1.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926498863" lon="19.649131779">
+        <ele>1771.5</ele>
+        <time>2010-08-12T13:51:42.021Z</time>
+        <fix>3d</fix>
+        <sat>8</sat>
+        <extensions>
+          <nmea:course>75.8</nmea:course>
+          <nmea:speed>1.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926500624" lon="19.649203612">
+        <ele>1773.5</ele>
+        <time>2010-08-12T13:51:49.027Z</time>
+        <fix>3d</fix>
+        <sat>9</sat>
+        <extensions>
+          <nmea:course>115.5</nmea:course>
+          <nmea:speed>1.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926388055" lon="19.648992723">
+        <ele>1768.0</ele>
+        <time>2010-08-12T13:52:28.004Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>279.6</nmea:course>
+          <nmea:speed>1.3</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926387384" lon="19.648874371">
+        <ele>1766.5</ele>
+        <time>2010-08-12T13:52:34.991Z</time>
+        <fix>3d</fix>
+        <sat>7</sat>
+        <extensions>
+          <nmea:course>257.1</nmea:course>
+          <nmea:speed>1.4</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926362825" lon="19.648662560">
+        <ele>1763.5</ele>
+        <time>2010-08-12T13:52:46.988Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>275.4</nmea:course>
+          <nmea:speed>1.8</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926364669" lon="19.648474973">
+        <ele>1762.0</ele>
+        <time>2010-08-12T13:52:54.978Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>255.5</nmea:course>
+          <nmea:speed>1.7</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926355198" lon="19.648303228">
+        <ele>1760.5</ele>
+        <time>2010-08-12T13:53:01.978Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>274.7</nmea:course>
+          <nmea:speed>1.9</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926347738" lon="19.648131818">
+        <ele>1759.5</ele>
+        <time>2010-08-12T13:53:11.968Z</time>
+        <fix>3d</fix>
+        <sat>7</sat>
+        <extensions>
+          <nmea:course>247.0</nmea:course>
+          <nmea:speed>1.8</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926340110" lon="19.648084125">
+        <ele>1759.5</ele>
+        <time>2010-08-12T13:53:13.974Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>263.4</nmea:course>
+          <nmea:speed>1.8</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926333321" lon="19.648023608">
+        <ele>1758.5</ele>
+        <time>2010-08-12T13:53:16.971Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>248.2</nmea:course>
+          <nmea:speed>1.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926214968" lon="19.647355571">
+        <ele>1751.0</ele>
+        <time>2010-08-12T13:53:57.952Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>231.1</nmea:course>
+          <nmea:speed>1.4</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926121426" lon="19.646860033">
+        <ele>1747.0</ele>
+        <time>2010-08-12T13:54:25.935Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>257.5</nmea:course>
+          <nmea:speed>1.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926116565" lon="19.646717959">
+        <ele>1746.0</ele>
+        <time>2010-08-12T13:54:31.932Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>281.0</nmea:course>
+          <nmea:speed>1.7</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926165599" lon="19.646582256">
+        <ele>1741.5</ele>
+        <time>2010-08-12T13:55:03.925Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>159.2</nmea:course>
+          <nmea:speed>1.4</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926117319" lon="19.646661968">
+        <ele>1738.0</ele>
+        <time>2010-08-12T13:56:04.896Z</time>
+        <fix>3d</fix>
+        <sat>7</sat>
+        <extensions>
+          <nmea:course>13.9</nmea:course>
+          <nmea:speed>0.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926219998" lon="19.646335493">
+        <ele>1727.5</ele>
+        <time>2010-08-12T13:57:05.87Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>19.1</nmea:course>
+          <nmea:speed>1.4</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926279341" lon="19.646372374">
+        <ele>1722.0</ele>
+        <time>2010-08-12T13:58:06.84Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>179.5</nmea:course>
+          <nmea:speed>0.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926289986" lon="19.646366925">
+        <ele>1721.5</ele>
+        <time>2010-08-12T13:59:07.811Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>183.4</nmea:course>
+          <nmea:speed>0.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926442537" lon="19.646346138">
+        <ele>1722.5</ele>
+        <time>2010-08-12T14:00:08.772Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>35.9</nmea:course>
+          <nmea:speed>0.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926742190" lon="19.646288722">
+        <ele>1712.5</ele>
+        <time>2010-08-12T14:01:11.733Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>172.4</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926953581" lon="19.646286292">
+        <ele>1710.0</ele>
+        <time>2010-08-12T14:01:52.674Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>5.6</nmea:course>
+          <nmea:speed>2.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927129434" lon="19.646218566">
+        <ele>1703.0</ele>
+        <time>2010-08-12T14:02:53.65Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>197.9</nmea:course>
+          <nmea:speed>0.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926940506" lon="19.645922266">
+        <ele>1694.5</ele>
+        <time>2010-08-12T14:03:54.626Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>203.9</nmea:course>
+          <nmea:speed>0.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926834810" lon="19.645624289">
+        <ele>1683.5</ele>
+        <time>2010-08-12T14:04:55.59Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>219.7</nmea:course>
+          <nmea:speed>0.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927001023" lon="19.645448437">
+        <ele>1677.5</ele>
+        <time>2010-08-12T14:05:56.547Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>212.6</nmea:course>
+          <nmea:speed>0.3</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926891555" lon="19.645216761">
+        <ele>1672.5</ele>
+        <time>2010-08-12T14:06:57.518Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>225.3</nmea:course>
+          <nmea:speed>0.6</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926877139" lon="19.644869918">
+        <ele>1663.0</ele>
+        <time>2010-08-12T14:07:58.49Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>267.7</nmea:course>
+          <nmea:speed>0.4</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926840426" lon="19.644435317">
+        <ele>1651.0</ele>
+        <time>2010-08-12T14:08:59.459Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>261.4</nmea:course>
+          <nmea:speed>0.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926828021" lon="19.644149578">
+        <ele>1644.0</ele>
+        <time>2010-08-12T14:10:00.431Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>248.7</nmea:course>
+          <nmea:speed>0.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926774376" lon="19.643790916">
+        <ele>1635.5</ele>
+        <time>2010-08-12T14:11:01.4Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>260.9</nmea:course>
+          <nmea:speed>0.7</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926785692" lon="19.643664852">
+        <ele>1633.0</ele>
+        <time>2010-08-12T14:12:02.329Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>176.7</nmea:course>
+          <nmea:speed>0.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926860459" lon="19.643469219">
+        <ele>1630.0</ele>
+        <time>2010-08-12T14:13:03.295Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>279.5</nmea:course>
+          <nmea:speed>0.6</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926869008" lon="19.643057332">
+        <ele>1621.5</ele>
+        <time>2010-08-12T14:14:04.265Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>265.7</nmea:course>
+          <nmea:speed>0.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926820812" lon="19.642637902">
+        <ele>1611.5</ele>
+        <time>2010-08-12T14:15:05.229Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>299.5</nmea:course>
+          <nmea:speed>0.3</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926924496" lon="19.642293574">
+        <ele>1597.0</ele>
+        <time>2010-08-12T14:16:06.198Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>196.0</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926918294" lon="19.642014372">
+        <ele>1590.0</ele>
+        <time>2010-08-12T14:17:07.16Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>262.2</nmea:course>
+          <nmea:speed>0.7</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926918294" lon="19.641620507">
+        <ele>1583.0</ele>
+        <time>2010-08-12T14:18:08.13Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>263.7</nmea:course>
+          <nmea:speed>0.3</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927038993" lon="19.641180206">
+        <ele>1578.0</ele>
+        <time>2010-08-12T14:19:09.104Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>283.4</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927105545" lon="19.640999911">
+        <ele>1574.0</ele>
+        <time>2010-08-12T14:20:10.071Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>178.1</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927251055" lon="19.640695648">
+        <ele>1569.0</ele>
+        <time>2010-08-12T14:21:11.043Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>322.6</nmea:course>
+          <nmea:speed>0.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927309309" lon="19.640495404">
+        <ele>1559.0</ele>
+        <time>2010-08-12T14:22:12.017Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>161.8</nmea:course>
+          <nmea:speed>1.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927322385" lon="19.640187789">
+        <ele>1551.5</ele>
+        <time>2010-08-12T14:23:12.989Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>291.6</nmea:course>
+          <nmea:speed>0.4</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927316182" lon="19.639882855">
+        <ele>1541.5</ele>
+        <time>2010-08-12T14:24:13.964Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>243.2</nmea:course>
+          <nmea:speed>0.4</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927299922" lon="19.639595105">
+        <ele>1535.0</ele>
+        <time>2010-08-12T14:25:14.925Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>224.4</nmea:course>
+          <nmea:speed>0.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927266981" lon="19.639342139">
+        <ele>1527.0</ele>
+        <time>2010-08-12T14:26:15.905Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>230.7</nmea:course>
+          <nmea:speed>0.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927219120" lon="19.639106607">
+        <ele>1521.0</ele>
+        <time>2010-08-12T14:27:16.858Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>240.7</nmea:course>
+          <nmea:speed>0.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927184754" lon="19.638810140">
+        <ele>1513.5</ele>
+        <time>2010-08-12T14:28:17.832Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>204.1</nmea:course>
+          <nmea:speed>0.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927137732" lon="19.638479055">
+        <ele>1506.0</ele>
+        <time>2010-08-12T14:29:18.796Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>223.4</nmea:course>
+          <nmea:speed>0.4</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927090877" lon="19.638202284">
+        <ele>1494.5</ele>
+        <time>2010-08-12T14:30:19.727Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>165.8</nmea:course>
+          <nmea:speed>0.3</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927030360" lon="19.637947475">
+        <ele>1486.0</ele>
+        <time>2010-08-12T14:31:20.699Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>89.5</nmea:course>
+          <nmea:speed>0.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927101690" lon="19.637808922">
+        <ele>1494.0</ele>
+        <time>2010-08-12T14:32:21.655Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>207.3</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.927056930" lon="19.637755110">
+        <ele>1493.5</ele>
+        <time>2010-08-12T14:33:22.609Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>133.5</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926996162" lon="19.637543970">
+        <ele>1489.0</ele>
+        <time>2010-08-12T14:34:23.627Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>195.0</nmea:course>
+          <nmea:speed>0.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926982583" lon="19.637352276">
+        <ele>1486.0</ele>
+        <time>2010-08-12T14:34:59.565Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>305.9</nmea:course>
+          <nmea:speed>2.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926847467" lon="19.636933600">
+        <ele>1477.5</ele>
+        <time>2010-08-12T14:36:00.565Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>235.6</nmea:course>
+          <nmea:speed>0.3</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926745459" lon="19.636708881">
+        <ele>1469.5</ele>
+        <time>2010-08-12T14:37:00.649Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>171.7</nmea:course>
+          <nmea:speed>0.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926729030" lon="19.636482486">
+        <ele>1463.5</ele>
+        <time>2010-08-12T14:38:01.492Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>205.8</nmea:course>
+          <nmea:speed>0.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926631717" lon="19.636130614">
+        <ele>1446.5</ele>
+        <time>2010-08-12T14:39:02.436Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>145.8</nmea:course>
+          <nmea:speed>0.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926600117" lon="19.636086106">
+        <ele>1450.0</ele>
+        <time>2010-08-12T14:40:03.392Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>164.2</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926604978" lon="19.636063307">
+        <ele>1456.5</ele>
+        <time>2010-08-12T14:41:04.366Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>176.4</nmea:course>
+          <nmea:speed>0.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926573462" lon="19.636071605">
+        <ele>1456.0</ele>
+        <time>2010-08-12T14:42:05.307Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>152.1</nmea:course>
+          <nmea:speed>0.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926576312" lon="19.636068839">
+        <ele>1457.0</ele>
+        <time>2010-08-12T14:43:06.208Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>182.7</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926561895" lon="19.636068672">
+        <ele>1457.0</ele>
+        <time>2010-08-12T14:44:07.179Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>220.0</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926582179" lon="19.636056434">
+        <ele>1456.0</ele>
+        <time>2010-08-12T14:45:08.14Z</time>
+        <fix>3d</fix>
+        <sat>6</sat>
+        <extensions>
+          <nmea:course>198.4</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926562817" lon="19.636060290">
+        <ele>1455.5</ele>
+        <time>2010-08-12T14:46:09.117Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>150.4</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926579078" lon="19.636052997">
+        <ele>1454.5</ele>
+        <time>2010-08-12T14:47:10.087Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>96.9</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926524428" lon="19.636000443">
+        <ele>1456.5</ele>
+        <time>2010-08-12T14:48:11.064Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>177.3</nmea:course>
+          <nmea:speed>0.3</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926523674" lon="19.635997928">
+        <ele>1456.5</ele>
+        <time>2010-08-12T14:49:12.03Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>184.1</nmea:course>
+          <nmea:speed>0.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926540689" lon="19.635948308">
+        <ele>1455.5</ele>
+        <time>2010-08-12T14:50:13.003Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>219.2</nmea:course>
+          <nmea:speed>0.6</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926508167" lon="19.635718392">
+        <ele>1455.0</ele>
+        <time>2010-08-12T14:51:13.978Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>196.7</nmea:course>
+          <nmea:speed>0.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926593244" lon="19.635939087">
+        <ele>1454.5</ele>
+        <time>2010-08-12T14:52:14.949Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>232.1</nmea:course>
+          <nmea:speed>1.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926385205" lon="19.635392336">
+        <ele>1453.0</ele>
+        <time>2010-08-12T14:53:15.92Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>257.8</nmea:course>
+          <nmea:speed>0.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926298285" lon="19.634929991">
+        <ele>1453.5</ele>
+        <time>2010-08-12T14:54:16.892Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>201.3</nmea:course>
+          <nmea:speed>0.9</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926100304" lon="19.634312245">
+        <ele>1453.0</ele>
+        <time>2010-08-12T14:55:14.863Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>239.9</nmea:course>
+          <nmea:speed>0.1</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926124612" lon="19.634124490">
+        <ele>1453.0</ele>
+        <time>2010-08-12T14:56:15.835Z</time>
+        <fix>3d</fix>
+        <sat>4</sat>
+        <extensions>
+          <nmea:course>193.4</nmea:course>
+          <nmea:speed>0.4</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926112374" lon="19.633758117">
+        <ele>1451.5</ele>
+        <time>2010-08-12T14:57:16.739Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>20.4</nmea:course>
+          <nmea:speed>2.0</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.925796795" lon="19.633240786">
+        <ele>1451.0</ele>
+        <time>2010-08-12T14:58:07.726Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>241.8</nmea:course>
+          <nmea:speed>0.2</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.926119582" lon="19.633059737">
+        <ele>1450.5</ele>
+        <time>2010-08-12T14:58:45.7Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>21.3</nmea:course>
+          <nmea:speed>12.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.925853792" lon="19.632482224">
+        <ele>1450.5</ele>
+        <time>2010-08-12T14:59:28.676Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>220.9</nmea:course>
+          <nmea:speed>0.9</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.925528994" lon="19.632105123">
+        <ele>1449.5</ele>
+        <time>2010-08-12T15:00:31.647Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>10.6</nmea:course>
+          <nmea:speed>1.5</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.925826803" lon="19.631767500">
+        <ele>1440.0</ele>
+        <time>2010-08-12T15:01:32.611Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions>
+          <nmea:course>18.7</nmea:course>
+          <nmea:speed>5.6</nmea:speed>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.925749773" lon="19.631062247">
+        <ele>1437.0</ele>
+        <time>2010-08-12T15:02:19.565Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions/>
+      </trkpt>
+      <trkpt lat="48.926153697" lon="19.630964514">
+        <ele>1435.5</ele>
+        <time>2010-08-12T15:03:20.537Z</time>
+        <fix>3d</fix>
+        <sat>5</sat>
+        <extensions/>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

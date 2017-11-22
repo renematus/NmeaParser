@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace NmeaParser.Business
 {
+    public delegate void NMEAMessageEventHandler(object sender, NMEAEventArgs e);
+
     public class NMEAEventArgs : EventArgs
     {
         public string message;
