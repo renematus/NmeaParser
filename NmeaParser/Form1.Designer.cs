@@ -188,9 +188,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(253, 103);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 13);
+            this.label7.Size = new System.Drawing.Size(110, 13);
             this.label7.TabIndex = 15;
-            this.label7.Text = "filtr min vzdalenost (\')";
+            this.label7.Text = "filtr min vzdalenost (m)";
             // 
             // tbFdistance
             // 

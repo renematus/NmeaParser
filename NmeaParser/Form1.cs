@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using NmeaParser.Business;
 using System.Diagnostics;
 using MKCoolsoft.GPXLib;
+using System.Device.Location;
 
 namespace NmeaParser
 {
@@ -160,6 +161,14 @@ namespace NmeaParser
                 filtrByTime = true;
             }
 
+            int distance = 0;
+            bool filtrByDistance = false;
+            if (!string.IsNullOrEmpty(tbFdistance.Text) && int.TryParse(tbFdistance.Text, out distance))
+            {
+                filtrByTime = false;
+                filtrByDistance = true;
+            }
+
 
             List<Wpt> wayPoits = new List<Wpt>();
             foreach (var point in pointList)
@@ -183,10 +192,10 @@ namespace NmeaParser
 
                 if (filtrByTime)
                 {
-                    if (wayPoits.Count==0 || Math.Abs((wayPoits.Last().Time - wayPoint.Time).Seconds) > timeDiff)
+                    if (wayPoits.Count == 0 || Math.Abs((wayPoits.Last().Time - wayPoint.Time).Seconds) > timeDiff)
                     {
                         wayPoits.Add(wayPoint);
-                        gpx.AddTrackPoint("trackXXX", 0, wayPoint);
+                        gpx.AddTrackPoint("trackTimeFiltr", 0, wayPoint);
 
                         tbFiltrCount.Invoke((Action)(() =>
                         {
@@ -194,10 +203,39 @@ namespace NmeaParser
                         }));
                     }
                 }
+                else if (filtrByDistance)
+                {
+                    if (wayPoits.Count == 0)
+                    {
+                        wayPoits.Add(wayPoint);
+                        gpx.AddTrackPoint("trackDistanceFiltr", 0, wayPoint);
+
+                        tbFiltrCount.Invoke((Action)(() =>
+                        {
+                            tbFiltrCount.Text = wayPoits.Count.ToString();
+                        }));
+                    }
+                    else
+                    {
+                        var aCoord = new GeoCoordinate((double)wayPoits.Last().Lat, (double)wayPoits.Last().Lon);
+                        var bCoord = new GeoCoordinate((double)wayPoint.Lat, (double)wayPoint.Lon);
+
+                        if (aCoord.GetDistanceTo(bCoord) > distance)
+                        {
+                            wayPoits.Add(wayPoint);
+                            gpx.AddTrackPoint("trackDistanceFiltr", 0, wayPoint);
+
+                            tbFiltrCount.Invoke((Action)(() =>
+                            {
+                                tbFiltrCount.Text = wayPoits.Count.ToString();
+                            }));
+                        }
+                    }
+                }
                 else
                 {
                     wayPoits.Add(wayPoint);
-                    gpx.AddTrackPoint("trackXXX", 0, wayPoint);
+                    gpx.AddTrackPoint("trackNoFiltr", 0, wayPoint);
                 }
             }
 
