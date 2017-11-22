@@ -37,14 +37,7 @@ namespace NmeaParser
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            pointList = new List<GgaDto>();
-            rmcList = new List<RmcDto>();
-            gga = new GGA();
-            gll = new GLL();
-            rmc = new RMC();
            
-            nmeaParser = new NMEA();
-            nmeaParser.MessageReceived += NmeaParser_MessageReceived;
 
            
            
@@ -126,6 +119,15 @@ namespace NmeaParser
             {
                 if (File.Exists(tbSourceFile.Text))
                 {
+                    pointList = new List<GgaDto>();
+                    rmcList = new List<RmcDto>();
+                    gga = new GGA();
+                    gll = new GLL();
+                    rmc = new RMC();
+
+                    nmeaParser = new NMEA();
+                    nmeaParser.MessageReceived += NmeaParser_MessageReceived;
+
                     tbGpxFile.Text = String.Empty;
                     tbStatus.Text = String.Empty;
                     tbGGA.Text = "0";
@@ -176,7 +178,27 @@ namespace NmeaParser
                 Wpt wayPoint = new Wpt();
                 wayPoint.Lat = (decimal)point.latitude;
                 wayPoint.Lon = (decimal)point.longitude;
-                wayPoint.Ele = (decimal)point.altitude;
+
+                if (point.altitude > 0)
+                {
+                    wayPoint.Ele = (decimal)point.altitude;
+                    wayPoint.EleSpecified = true;
+                }
+
+                if (point.hdop > 0)
+                {
+                    wayPoint.Hdop = (decimal)point.hdop;
+                    wayPoint.HdopSpecified = true;
+                }
+
+                if (point.geoidSeparation > 0)
+                {
+                    wayPoint.Geoidheight = (decimal)point.geoidSeparation;
+                    wayPoint.GeoidheightSpecified = true;
+                }
+
+               
+
 
                 if (date != null)
                 {
@@ -186,13 +208,13 @@ namespace NmeaParser
                 {
                     wayPoint.Time = point.time;
                 }
-                wayPoint.EleSpecified = true;
+               
                 wayPoint.TimeSpecified = true;
 
 
                 if (filtrByTime)
                 {
-                    if (wayPoits.Count == 0 || Math.Abs((wayPoits.Last().Time - wayPoint.Time).Seconds) > timeDiff)
+                    if (wayPoits.Count == 0 || Math.Abs((wayPoits.Last().Time - wayPoint.Time).TotalSeconds) > timeDiff)
                     {
                         wayPoits.Add(wayPoint);
                         gpx.AddTrackPoint("trackTimeFiltr", 0, wayPoint);
