@@ -149,13 +149,7 @@ namespace NmeaParser
         private void converseToGPX()
         {
             DateTime? date = null;
-            if (rmcList.Count>0)
-            {
-                //we have date, correc date time in points
-                date = rmcList[0].time;
-
-            }
-
+           
             int timeDiff=0;
             bool filtrByTime = false;
             if (!string.IsNullOrEmpty(tbFtime.Text) && int.TryParse(tbFtime.Text, out timeDiff))
@@ -173,8 +167,16 @@ namespace NmeaParser
 
 
             List<Wpt> wayPoits = new List<Wpt>();
+            int counter = 0;
+            RmcDto rmc = null;
             foreach (var point in pointList)
             {
+                if (rmcList.Count>counter)
+                {
+                    rmc = rmcList[counter++];
+                    date = rmc.time;
+                }
+
                 Wpt wayPoint = new Wpt();
                 wayPoint.Lat = (decimal)point.latitude;
                 wayPoint.Lon = (decimal)point.longitude;
@@ -197,7 +199,8 @@ namespace NmeaParser
                     wayPoint.GeoidheightSpecified = true;
                 }
 
-               
+                
+           
 
 
                 if (date != null)
