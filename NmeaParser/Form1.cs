@@ -183,7 +183,7 @@ namespace NmeaParser
 
                 if (filtrByTime)
                 {
-                    if (wayPoits.Count==0 || (wayPoits.Last().Time - wayPoint.Time).Seconds > timeDiff)
+                    if (wayPoits.Count==0 || Math.Abs((wayPoits.Last().Time - wayPoint.Time).Seconds) > timeDiff)
                     {
                         wayPoits.Add(wayPoint);
                         gpx.AddTrackPoint("trackXXX", 0, wayPoint);
