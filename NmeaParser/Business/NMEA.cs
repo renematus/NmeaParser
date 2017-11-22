@@ -37,7 +37,7 @@ namespace NmeaParser.Business
 
             while ((startIndex = buffer.IndexOf('$', endIndex)) >= 0)
             {
-                endIndex = buffer.IndexOf("\r\n", startIndex);
+                endIndex = buffer.IndexOf("\n", startIndex);
 
                 if (endIndex > 0)
                 {

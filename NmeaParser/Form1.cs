@@ -41,7 +41,7 @@ namespace NmeaParser
             nmeaParser = new NMEA();
             nmeaParser.MessageReceived += NmeaParser_MessageReceived;
 
-            String data = File.ReadAllText(@"c:\Vyvoj\SkolaFEI\MS\NMEA_Parser\NmeaParser\NmeaParser\Data\20090804-174057.nmea.txt");
+            String data = File.ReadAllText(@"c:\Vyvoj\SkolaFEI\MS\NMEA_Parser\NmeaParser\NmeaParser\Data\2015-08-12.nmea.txt");
             nmeaParser.AddData(data);
            
         }
