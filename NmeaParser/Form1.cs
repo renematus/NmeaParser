@@ -41,8 +41,7 @@ namespace NmeaParser
             nmeaParser = new NMEA();
             nmeaParser.MessageReceived += NmeaParser_MessageReceived;
 
-            String data = File.ReadAllText(@"c:\Vyvoj\SkolaFEI\MS\NMEA_Parser\NmeaParser\NmeaParser\Data\2015-08-12.nmea.txt");
-          //  nmeaParser.AddData(data);
+           
            
         }
 
@@ -105,9 +104,28 @@ namespace NmeaParser
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+            openFileDialog1.InitialDirectory = path;
+
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 tbSourceFile.Text = openFileDialog1.FileName;
+            }
+        }
+
+        private void btnParseFile_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(tbSourceFile.Text))
+            {
+                if (File.Exists(tbSourceFile.Text))
+                {
+                    String data = File.ReadAllText(tbSourceFile.Text);
+                    nmeaParser.AddData(data);
+                }
+                else
+                {
+                    MessageBox.Show("Zadany soubor neexistuje", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

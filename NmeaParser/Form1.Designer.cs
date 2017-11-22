@@ -69,6 +69,7 @@
             this.btnParseFile.TabIndex = 2;
             this.btnParseFile.Text = "Parse file";
             this.btnParseFile.UseVisualStyleBackColor = true;
+            this.btnParseFile.Click += new System.EventHandler(this.btnParseFile_Click);
             // 
             // textBox1
             // 
