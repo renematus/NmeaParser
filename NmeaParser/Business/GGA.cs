@@ -4,8 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NmeaParser.OGL_Library;
-using static NmeaParser.OGL_Library.ConvertGPX;
+
 
 namespace NmeaParser.Business
 {
@@ -35,11 +34,14 @@ namespace NmeaParser.Business
         public short refStatID;
 
 
-        public CWaypoint getPoit()
+        public GgaDto getGgaDtoPoit()
         {
-            CWaypoint point = new CWaypoint();
-            point.lat = latitude.ToString();
-            point.lon = longitude.ToString();
+            GgaDto point = new GgaDto();
+            point.latitude = latitude;
+            point.longitude = longitude;
+            point.altitude = altitude;
+            point.time = time;
+           
             return point;
         }
 

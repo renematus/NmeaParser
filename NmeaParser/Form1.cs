@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NmeaParser.Business;
 using System.Diagnostics;
-using static NmeaParser.OGL_Library.ConvertGPX;
+using MKCoolsoft.GPXLib;
 
 namespace NmeaParser
 {
     public partial class Form1 : Form
     {
+        private GPXLib gpx = new GPXLib();
         private NMEA nmeaParser;
         private GGA gga;
         private HDT hdt;
@@ -23,7 +24,7 @@ namespace NmeaParser
 
         DateTime lastTime;
 
-        List<CWaypoint> waypointList;
+        List<GgaDto> pointList;
 
 
         public Form1()
@@ -34,7 +35,7 @@ namespace NmeaParser
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            waypointList = new List<CWaypoint>();
+            pointList = new List<GgaDto>();
             hdt = new HDT();
             gga = new GGA();
             att = new P_ATT();
@@ -51,30 +52,15 @@ namespace NmeaParser
             {
                 case "GGA":
                     gga.Parse(e.message);
-                    waypointList.Add(gga.getPoit());
+                    pointList.Add(gga.getGgaDtoPoit());
 
                     tbGGA.Invoke((Action) (() =>
                         {
-                            tbGGA.Text = waypointList.Count.ToString();
+                            tbGGA.Text = pointList.Count.ToString();
                     }));
                     break;
                 case "FINISH":
-                    if (GPSConvertToGPX("Data\\Result.gpx", waypointList.ToArray(), null))
-                    {
-                        tbGpxFile.Invoke((Action)(() =>
-                        {
-                            string fileName = Path.Combine(Directory.GetCurrentDirectory(), "Data\\Result.gpx");
-                            tbGpxFile.Text = fileName;
-                            tbStatus.Text = "Konverze nmea to GPX OK";
-                        }));
-                    }
-                    else
-                    {
-                        tbStatus.Invoke((Action)(() =>
-                        {
-                            tbStatus.Text = "Konverze nmea to GPX skoncila s chybou";
-                        }));
-                    }
+                    converseToGPX();
                     break;
                 default:
                     Debug.WriteLine(e.message);
@@ -129,7 +115,7 @@ namespace NmeaParser
                     tbGpxFile.Text = String.Empty;
                     tbStatus.Text = String.Empty;
                     tbGGA.Text = "0";
-                    waypointList = new List<CWaypoint>();
+                    pointList = new List<GgaDto>();
                     String data = File.ReadAllText(tbSourceFile.Text);
                     Task parserTask = new Task( () => nmeaParser.AddData(data));
                     parserTask.Start();
@@ -139,6 +125,39 @@ namespace NmeaParser
                     MessageBox.Show("Zadany soubor neexistuje", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+
+        private void converseToGPX()
+        {
+            List<Wpt> wayPoits = new List<Wpt>();
+            foreach (var point in pointList)
+            {
+                Wpt wayPoint = new Wpt();
+                wayPoint.Lat = (decimal)point.latitude;
+                wayPoint.Lon = (decimal)point.longitude;
+                wayPoint.Ele = (decimal)point.altitude;
+                wayPoits.Add(wayPoint);
+                gpx.AddTrackPoint("trackXXX", 0, wayPoint);
+            }
+
+            gpx.SaveToFile("Data\\Result.gpx");
+
+            
+                tbGpxFile.Invoke((Action)(() =>
+                {
+                    string fileName = Path.Combine(Directory.GetCurrentDirectory(), "Data\\Result.gpx");
+                    tbGpxFile.Text = fileName;
+                    tbStatus.Text = "Konverze nmea to GPX OK";
+                }));
+           
+            //else
+            //{
+            //    tbStatus.Invoke((Action)(() =>
+            //    {
+            //        tbStatus.Text = "Konverze nmea to GPX skoncila s chybou";
+            //    }));
+            //}
         }
     }
 }

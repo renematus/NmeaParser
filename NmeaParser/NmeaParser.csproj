@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MKCoolsoft.GPXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MKCoolsoft.GPXLib.1.0.2\lib\MKCoolsoft.GPXLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\GGA.cs" />
+    <Compile Include="Business\GgaDto.cs" />
     <Compile Include="Business\HDT.cs" />
     <Compile Include="Business\NMEA.cs" />
     <Compile Include="Business\P_ATT.cs" />
@@ -56,11 +61,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="OGL_Library\ConvertGPX.cs" />
-    <Compile Include="OGL_Library\GPSComm.cs" />
-    <Compile Include="OGL_Library\GPSDatum.cs" />
-    <Compile Include="OGL_Library\Polygon.cs" />
-    <Compile Include="OGL_Library\Sound.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -75,6 +75,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
