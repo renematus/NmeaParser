@@ -56,6 +56,8 @@ namespace NmeaParser.Business
                     return;
                 }
             }
+
+
         }
 
         #region Events

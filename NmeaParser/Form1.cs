@@ -42,7 +42,7 @@ namespace NmeaParser
             nmeaParser.MessageReceived += NmeaParser_MessageReceived;
 
             String data = File.ReadAllText(@"c:\Vyvoj\SkolaFEI\MS\NMEA_Parser\NmeaParser\NmeaParser\Data\2015-08-12.nmea.txt");
-            nmeaParser.AddData(data);
+          //  nmeaParser.AddData(data);
            
         }
 
@@ -101,6 +101,14 @@ namespace NmeaParser
             //log.WriteLine(s);
 
             lastTime = att.time;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                tbSourceFile.Text = openFileDialog1.FileName;
+            }
         }
     }
 }
