@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbGGA = new System.Windows.Forms.TextBox();
+            this.tbStatus = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -93,9 +94,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "LOG";
+            this.label2.Text = "Status";
             // 
             // label3
             // 
@@ -114,11 +115,20 @@
             this.tbGGA.Size = new System.Drawing.Size(94, 20);
             this.tbGGA.TabIndex = 7;
             // 
+            // tbStatus
+            // 
+            this.tbStatus.Enabled = false;
+            this.tbStatus.Location = new System.Drawing.Point(64, 182);
+            this.tbStatus.Name = "tbStatus";
+            this.tbStatus.Size = new System.Drawing.Size(512, 20);
+            this.tbStatus.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 348);
+            this.Controls.Add(this.tbStatus);
             this.Controls.Add(this.tbGGA);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -145,6 +155,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbGGA;
+        private System.Windows.Forms.TextBox tbStatus;
     }
 }
 

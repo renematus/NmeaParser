@@ -59,16 +59,23 @@ namespace NmeaParser
                     }));
                     break;
                 case "FINISH":
-                    if (GPSConvertToGPX("Result.gpx", waypointList.ToArray(), null))
+                    if (GPSConvertToGPX("Data\\Result.gpx", waypointList.ToArray(), null))
                     {
                         tbGpxFile.Invoke((Action)(() =>
                         {
-                            string fileName = Path.Combine(Directory.GetCurrentDirectory(), "Result.gpx");
-                        tbGpxFile.Text = fileName;
+                            string fileName = Path.Combine(Directory.GetCurrentDirectory(), "Data\\Result.gpx");
+                            tbGpxFile.Text = fileName;
+                            tbStatus.Text = "Konverze nmea to GPX OK";
+                        }));
+                    }
+                    else
+                    {
+                        tbStatus.Invoke((Action)(() =>
+                        {
+                            tbStatus.Text = "Konverze nmea to GPX skoncila s chybou";
                         }));
                     }
                     break;
-
                 default:
                     Debug.WriteLine(e.message);
                     break;
@@ -119,7 +126,10 @@ namespace NmeaParser
             {
                 if (File.Exists(tbSourceFile.Text))
                 {
+                    tbGpxFile.Text = String.Empty;
+                    tbStatus.Text = String.Empty;
                     tbGGA.Text = "0";
+                    waypointList = new List<CWaypoint>();
                     String data = File.ReadAllText(tbSourceFile.Text);
                     Task parserTask = new Task( () => nmeaParser.AddData(data));
                     parserTask.Start();
