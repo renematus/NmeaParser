@@ -38,6 +38,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbGGA = new System.Windows.Forms.TextBox();
             this.tbStatus = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbRMC = new System.Windows.Forms.TextBox();
+            this.tbGLL = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -123,11 +127,49 @@
             this.tbStatus.Size = new System.Drawing.Size(512, 20);
             this.tbStatus.TabIndex = 8;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 251);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "RMC message count:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 276);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "GLL message count:";
+            // 
+            // tbRMC
+            // 
+            this.tbRMC.Enabled = false;
+            this.tbRMC.Location = new System.Drawing.Point(146, 247);
+            this.tbRMC.Name = "tbRMC";
+            this.tbRMC.Size = new System.Drawing.Size(94, 20);
+            this.tbRMC.TabIndex = 11;
+            // 
+            // tbGLL
+            // 
+            this.tbGLL.Enabled = false;
+            this.tbGLL.Location = new System.Drawing.Point(146, 273);
+            this.tbGLL.Name = "tbGLL";
+            this.tbGLL.Size = new System.Drawing.Size(94, 20);
+            this.tbGLL.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 348);
+            this.Controls.Add(this.tbGLL);
+            this.Controls.Add(this.tbRMC);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tbStatus);
             this.Controls.Add(this.tbGGA);
             this.Controls.Add(this.label3);
@@ -156,6 +198,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbGGA;
         private System.Windows.Forms.TextBox tbStatus;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbRMC;
+        private System.Windows.Forms.TextBox tbGLL;
     }
 }
 

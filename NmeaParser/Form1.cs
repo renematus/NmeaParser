@@ -19,12 +19,13 @@ namespace NmeaParser
         private GPXLib gpx = new GPXLib();
         private NMEA nmeaParser;
         private GGA gga;
-        private HDT hdt;
-        private P_ATT att;
+        private GLL gll;
+        private RMC rmc; 
 
         DateTime lastTime;
 
         List<GgaDto> pointList;
+        List<RmcDto> rmcList;
 
 
         public Form1()
@@ -36,9 +37,11 @@ namespace NmeaParser
         {
             base.OnLoad(e);
             pointList = new List<GgaDto>();
-            hdt = new HDT();
+            rmcList = new List<RmcDto>();
             gga = new GGA();
-            att = new P_ATT();
+            gll = new GLL();
+            rmc = new RMC();
+           
             nmeaParser = new NMEA();
             nmeaParser.MessageReceived += NmeaParser_MessageReceived;
 
@@ -59,6 +62,16 @@ namespace NmeaParser
                             tbGGA.Text = pointList.Count.ToString();
                     }));
                     break;
+
+                case "RMC":
+                    rmc.Parse(e.message);
+                    rmcList.Add(rmc.getRmcDtoPoit());
+                    tbRMC.Invoke((Action)(() =>
+                    {
+                        tbRMC.Text = rmcList.Count.ToString();
+                    }));
+                    break;
+
                 case "FINISH":
                     converseToGPX();
                     break;
@@ -68,32 +81,32 @@ namespace NmeaParser
             }
         }
 
-        private void LogData()
-        {
-            if (gga.time != att.time)
-                return;
+        //private void LogData()
+        //{
+        //    if (gga.time != att.time)
+        //        return;
 
-            if (att.time == lastTime)
-                return;
+        //    if (att.time == lastTime)
+        //        return;
 
-            string s = "";
+        //    string s = "";
 
-            s += gga.time.ToString("dd/MM/yyyy HH:mm:ss.sss") + ",";
-            s += gga.latitude.ToString("00.00000000") + ",";
-            s += gga.longitude.ToString("000.00000000") + ",";
-            s += gga.altitude.ToString("000.000") + ",";
-            s += gga.quality.ToString("0") + ",";
-            s += gga.numberOfSatellites.ToString("00") + ",";
-            //s += att.time.ToString("dd/MM/yyyy HH:mm:ss.sss") + ",";
-            s += att.Heading.ToString("000.000") + ",";
-            s += att.HeadingRMS.ToString("000.000") + ",";
-            s += att.Pitch.ToString("000.000") + ",";
-            s += att.PitchRMS.ToString("000.000");
+        //    s += gga.time.ToString("dd/MM/yyyy HH:mm:ss.sss") + ",";
+        //    s += gga.latitude.ToString("00.00000000") + ",";
+        //    s += gga.longitude.ToString("000.00000000") + ",";
+        //    s += gga.altitude.ToString("000.000") + ",";
+        //    s += gga.quality.ToString("0") + ",";
+        //    s += gga.numberOfSatellites.ToString("00") + ",";
+        //    //s += att.time.ToString("dd/MM/yyyy HH:mm:ss.sss") + ",";
+        //    s += att.Heading.ToString("000.000") + ",";
+        //    s += att.HeadingRMS.ToString("000.000") + ",";
+        //    s += att.Pitch.ToString("000.000") + ",";
+        //    s += att.PitchRMS.ToString("000.000");
 
-            //log.WriteLine(s);
+        //    //log.WriteLine(s);
 
-            lastTime = att.time;
-        }
+        //    lastTime = att.time;
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -115,7 +128,9 @@ namespace NmeaParser
                     tbGpxFile.Text = String.Empty;
                     tbStatus.Text = String.Empty;
                     tbGGA.Text = "0";
+                    tbRMC.Text = "0";
                     pointList = new List<GgaDto>();
+                    rmcList = new List<RmcDto>();
                     String data = File.ReadAllText(tbSourceFile.Text);
                     Task parserTask = new Task( () => nmeaParser.AddData(data));
                     parserTask.Start();
@@ -130,6 +145,14 @@ namespace NmeaParser
 
         private void converseToGPX()
         {
+            DateTime? date = null;
+            if (rmcList.Count>0)
+            {
+                //we have date, correc date time in points
+                date = rmcList[0].time;
+
+            }
+
             List<Wpt> wayPoits = new List<Wpt>();
             foreach (var point in pointList)
             {
@@ -137,6 +160,17 @@ namespace NmeaParser
                 wayPoint.Lat = (decimal)point.latitude;
                 wayPoint.Lon = (decimal)point.longitude;
                 wayPoint.Ele = (decimal)point.altitude;
+
+                if (date != null)
+                {
+                    wayPoint.Time = new DateTime(date.Value.Year, date.Value.Month, date.Value.Day, point.time.Hour, point.time.Minute, point.time.Second);
+                }
+                else
+                {
+                    wayPoint.Time = point.time;
+                }
+                wayPoint.EleSpecified = true;
+                wayPoint.TimeSpecified = true;
                 wayPoits.Add(wayPoint);
                 gpx.AddTrackPoint("trackXXX", 0, wayPoint);
             }
