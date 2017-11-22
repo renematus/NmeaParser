@@ -43,9 +43,11 @@
             this.tbRMC = new System.Windows.Forms.TextBox();
             this.tbGLL = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbFtime = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbFdistance = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbFiltrCount = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -174,12 +176,12 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Filtr zmena casu (s)";
             // 
-            // textBox1
+            // tbFtime
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(85, 20);
-            this.textBox1.TabIndex = 14;
+            this.tbFtime.Location = new System.Drawing.Point(119, 100);
+            this.tbFtime.Name = "tbFtime";
+            this.tbFtime.Size = new System.Drawing.Size(85, 20);
+            this.tbFtime.TabIndex = 14;
             // 
             // label7
             // 
@@ -190,21 +192,40 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "filtr min vzdalenost (\')";
             // 
-            // textBox2
+            // tbFdistance
             // 
-            this.textBox2.Location = new System.Drawing.Point(363, 99);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 16;
+            this.tbFdistance.Location = new System.Drawing.Point(363, 99);
+            this.tbFdistance.Name = "tbFdistance";
+            this.tbFdistance.Size = new System.Drawing.Size(100, 20);
+            this.tbFdistance.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(280, 224);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "filtr count";
+            // 
+            // tbFiltrCount
+            // 
+            this.tbFiltrCount.Enabled = false;
+            this.tbFiltrCount.Location = new System.Drawing.Point(345, 217);
+            this.tbFiltrCount.Name = "tbFiltrCount";
+            this.tbFiltrCount.Size = new System.Drawing.Size(94, 20);
+            this.tbFiltrCount.TabIndex = 18;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(591, 348);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbFiltrCount);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.tbFdistance);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbFtime);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbGLL);
             this.Controls.Add(this.tbRMC);
@@ -243,9 +264,11 @@
         private System.Windows.Forms.TextBox tbRMC;
         private System.Windows.Forms.TextBox tbGLL;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbFtime;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbFdistance;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbFiltrCount;
     }
 }
 

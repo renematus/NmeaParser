@@ -153,6 +153,14 @@ namespace NmeaParser
 
             }
 
+            int timeDiff=0;
+            bool filtrByTime = false;
+            if (!string.IsNullOrEmpty(tbFtime.Text) && int.TryParse(tbFtime.Text, out timeDiff))
+            {
+                filtrByTime = true;
+            }
+
+
             List<Wpt> wayPoits = new List<Wpt>();
             foreach (var point in pointList)
             {
@@ -171,8 +179,26 @@ namespace NmeaParser
                 }
                 wayPoint.EleSpecified = true;
                 wayPoint.TimeSpecified = true;
-                wayPoits.Add(wayPoint);
-                gpx.AddTrackPoint("trackXXX", 0, wayPoint);
+
+
+                if (filtrByTime)
+                {
+                    if (wayPoits.Count==0 || (wayPoits.Last().Time - wayPoint.Time).Seconds > timeDiff)
+                    {
+                        wayPoits.Add(wayPoint);
+                        gpx.AddTrackPoint("trackXXX", 0, wayPoint);
+
+                        tbFiltrCount.Invoke((Action)(() =>
+                        {
+                            tbFiltrCount.Text = wayPoits.Count.ToString();
+                        }));
+                    }
+                }
+                else
+                {
+                    wayPoits.Add(wayPoint);
+                    gpx.AddTrackPoint("trackXXX", 0, wayPoint);
+                }
             }
 
             gpx.SaveToFile("Data\\Result.gpx");
