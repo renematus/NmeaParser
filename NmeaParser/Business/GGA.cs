@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NmeaParser.OGL_Library;
+using static NmeaParser.OGL_Library.ConvertGPX;
 
 namespace NmeaParser.Business
 {
@@ -31,6 +33,15 @@ namespace NmeaParser.Business
         public float diffGPSAge = 0;
         //Differential reference station ID (an integer between 0000 and 1023).
         public short refStatID;
+
+
+        public CWaypoint getPoit()
+        {
+            CWaypoint point = new CWaypoint();
+            point.lat = latitude.ToString();
+            point.lon = longitude.ToString();
+            return point;
+        }
 
 
         #region Compose

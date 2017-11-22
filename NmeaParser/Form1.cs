@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using NmeaParser.Business;
 using System.Diagnostics;
+using static NmeaParser.OGL_Library.ConvertGPX;
 
 namespace NmeaParser
 {
@@ -22,6 +23,8 @@ namespace NmeaParser
 
         DateTime lastTime;
 
+        List<CWaypoint> waypointList;
+
 
         public Form1()
         {
@@ -31,7 +34,7 @@ namespace NmeaParser
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-
+            waypointList = new List<CWaypoint>();
             hdt = new HDT();
             gga = new GGA();
             att = new P_ATT();
@@ -49,6 +52,12 @@ namespace NmeaParser
             {
                 case "GGA":
                     gga.Parse(e.message);
+                    waypointList.Add(gga.getPoit());
+
+                    if (waypointList.Count==100)
+                    {
+                        GPSConvertToGPX("test.gpx", waypointList.ToArray(), null);
+                    }
                     break;
 
                 case "HDT":
