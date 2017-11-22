@@ -53,20 +53,20 @@ namespace NmeaParser
                     gga.Parse(e.message);
                     waypointList.Add(gga.getPoit());
 
-                    if (waypointList.Count==100)
+                    tbGGA.Invoke((Action) (() =>
+                        {
+                            tbGGA.Text = waypointList.Count.ToString();
+                    }));
+                    break;
+                case "FINISH":
+                    if (GPSConvertToGPX("Result.gpx", waypointList.ToArray(), null))
                     {
-                        GPSConvertToGPX("test.gpx", waypointList.ToArray(), null);
+                        tbGpxFile.Invoke((Action)(() =>
+                        {
+                            string fileName = Path.Combine(Directory.GetCurrentDirectory(), "Result.gpx");
+                        tbGpxFile.Text = fileName;
+                        }));
                     }
-                    break;
-
-                case "HDT":
-                    hdt.Parse(e.message);
-                    break;
-
-                case "PSR":
-                    att.Parse(e.message);
-                    LogData();
-
                     break;
 
                 default:
@@ -119,8 +119,10 @@ namespace NmeaParser
             {
                 if (File.Exists(tbSourceFile.Text))
                 {
+                    tbGGA.Text = "0";
                     String data = File.ReadAllText(tbSourceFile.Text);
-                    nmeaParser.AddData(data);
+                    Task parserTask = new Task( () => nmeaParser.AddData(data));
+                    parserTask.Start();
                 }
                 else
                 {

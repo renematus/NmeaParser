@@ -53,11 +53,12 @@ namespace NmeaParser.Business
                 {
                     if ((startIndex = buffer.LastIndexOf('$')) > 0)
                         buffer = buffer.Remove(0, startIndex);
-                    return;
+                    break;
                 }
             }
 
-
+            //konec
+            OnMessageReceived(new NMEAEventArgs(string.Empty, "FINISH"));
         }
 
         #region Events

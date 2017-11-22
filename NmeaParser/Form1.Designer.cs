@@ -32,7 +32,7 @@
             this.tbSourceFile = new System.Windows.Forms.TextBox();
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.btnParseFile = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbGpxFile = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,19 +65,19 @@
             // 
             this.btnParseFile.Location = new System.Drawing.Point(13, 126);
             this.btnParseFile.Name = "btnParseFile";
-            this.btnParseFile.Size = new System.Drawing.Size(463, 31);
+            this.btnParseFile.Size = new System.Drawing.Size(563, 31);
             this.btnParseFile.TabIndex = 2;
             this.btnParseFile.Text = "Parse file";
             this.btnParseFile.UseVisualStyleBackColor = true;
             this.btnParseFile.Click += new System.EventHandler(this.btnParseFile_Click);
             // 
-            // textBox1
+            // tbGpxFile
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(64, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(412, 20);
-            this.textBox1.TabIndex = 3;
+            this.tbGpxFile.Enabled = false;
+            this.tbGpxFile.Location = new System.Drawing.Point(64, 73);
+            this.tbGpxFile.Name = "tbGpxFile";
+            this.tbGpxFile.Size = new System.Drawing.Size(512, 20);
+            this.tbGpxFile.TabIndex = 3;
             // 
             // label1
             // 
@@ -123,7 +123,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbGpxFile);
             this.Controls.Add(this.btnParseFile);
             this.Controls.Add(this.btnOpenFile);
             this.Controls.Add(this.tbSourceFile);
@@ -140,7 +140,7 @@
         private System.Windows.Forms.TextBox tbSourceFile;
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Button btnParseFile;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbGpxFile;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
